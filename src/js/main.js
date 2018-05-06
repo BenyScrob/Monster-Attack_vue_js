@@ -99,7 +99,10 @@ new Vue({
                 if (confirm("Yon won! Do you want to restart?")) {
                     this.startGame();
                 } else {
+                    this.playerHealth = 100;
+                    this.monsterHealth = 100;
                     this.gameIsRunning = false;
+                    this.turns = [];
                 }
                 return true;
             } else if (this.playerHealth <= 0) {
@@ -107,7 +110,10 @@ new Vue({
                 if (confirm("Yon lost! Do you want to restart?")) {
                     this.startGame();
                 } else {
+                    this.playerHealth = 100;
+                    this.monsterHealth = 100;
                     this.gameIsRunning = false;
+                    this.turns = [];
                 }
                 return true;
             }
